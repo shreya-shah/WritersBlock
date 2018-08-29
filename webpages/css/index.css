@@ -159,6 +159,48 @@ header ul li a:hover{
     margin: 1em;
     padding: 3em;
 }
+
+/* Styling form */
+
+.submit-writings input,textarea{
+    display: block;
+    margin: 1em auto;
+    width: 40%;
+    padding: 0.8em;
+}
+
+textarea{
+    height: 15em;
+    resize: none;
+}
+
+.submit-writings label{
+    display: block;
+    margin-bottom: 1em;
+    margin-top: 2em;
+    font-family: ubuntu;
+}
+
+.submit-writings input[type="submit"]{
+    width: 42%;
+    background: #333;
+    border: none;
+    color: wheat;
+}
+
+/* Styling about us */
+.about-us{
+    background: rgba(245, 222, 179, 0.719);
+    width: 40%;
+    margin: 1em auto 2em auto;
+    padding: 1em;
+    text-align: center;
+}
+
+.logo{
+    font-family: Sacramento;
+}
+
 /* Styling footer */
 footer{
     background: #333;
@@ -178,7 +220,7 @@ footer{
     margin: 0 2em;
     padding-bottom: 1.5em;
     text-align: center;
-    font-size: 0.8em;
+    font-size: 1em;
     line-height: 2em;
 }
 
@@ -194,6 +236,10 @@ footer{
     border: 1px solid wheat;
 }
 
+input::placeholder{
+    text-align: center;
+}
+
 .subscribe input[type="submit"]{
     background: transparent;
     color: wheat;
@@ -204,7 +250,8 @@ footer{
 .copyright{
     background-color: wheat;
     color: #333;
-    font-size: 12px;
+    font-size: 14px;
+    padding: 2px;
     text-align: center;
 }
 
