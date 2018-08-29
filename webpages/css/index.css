@@ -1,5 +1,6 @@
 /* importing fonts */
 @import url('https://fonts.googleapis.com/css?family=Sacramento');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 body{
     margin: 0 auto;
@@ -110,10 +111,19 @@ header ul li a:hover{
 }
 
 /* Styling write ups section */
-.war-genre{
+.war-genre,.science-fiction-genre{
     display: flex;
     flex-flow: column wrap;
     text-align: justify;
+}
+
+.war-genre h2,.science-fiction-genre h2{
+    text-align: center;
+    font-family: Montserrat;
+}
+
+.war-genre p,.science-fiction-genre p{
+    font-family: monospace;
 }
 
 .author{
@@ -143,13 +153,18 @@ header ul li a:hover{
     top: 0.5em;
 }
 .war-item,.science-fiction-item{
-    background: rgba(255,255,25,0.2);
+    background: rgba(255, 255, 25, 0.322);
     margin: 1em;
-    padding: 2em;
+    padding: 3em;
 }
 
 /* Media queries */
 @media (min-width:750px){
+    .try{
+        display: flex;
+    flex-flow: column wrap;
+    text-align: justify;
+    }
     header ul{
         display: inline;
         position: relative;
@@ -167,13 +182,14 @@ header ul li a:hover{
         display: none;
     }
 
-    .war-genre{
+    .war-genre,.science-fiction-genre{
         flex-direction: row;
+        display:flex;
         justify-content: space-around;
     }
 
-    .war-item{
-        width: 25%;
+    .war-item,.science-fiction-item{
+        width: 20%;   
     }
 }
 
