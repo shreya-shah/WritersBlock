@@ -1,15 +1,16 @@
 /* importing fonts */
 @import url('https://fonts.googleapis.com/css?family=Sacramento');
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
-
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Source+Code+Pro');
 body{
     margin: 0 auto;
+    background: rgba(248, 232, 201, 0.781);
 }
 
 /* Styling the header and the navbar */
 
 header{
     background: #333;
+    border-bottom: 0.2px solid wheat;
     padding: 1em;
     position: fixed;
     width: 100%;
@@ -74,14 +75,7 @@ header ul li a:hover{
     padding: 0em 1em 2em 1em;
     margin: 0 2em 2em 2em;
     text-align: center;
-    border-bottom: 1px dotted #777;
-}
-
-.genre,.submit,.writings{
-    padding: 0em 1em 2em 1em;
-    margin: 0 2em 2em 2em;
-    text-align: center;
-    border-bottom: 1px dotted #777;
+    border-bottom: 1px dotted #333;
 }
 
 .genre h2,.submit h2{
@@ -111,6 +105,14 @@ header ul li a:hover{
 }
 
 /* Styling write ups section */
+.writings h2{
+    font-family: 'Source Code Pro';
+}
+
+#science-fiction,#war{
+    margin-top: 4em;
+}
+
 .war-genre,.science-fiction-genre{
     display: flex;
     flex-flow: column wrap;
@@ -153,9 +155,57 @@ header ul li a:hover{
     top: 0.5em;
 }
 .war-item,.science-fiction-item{
-    background: rgba(255, 255, 25, 0.322);
+    background: rgba(240, 240, 56, 0.247);
     margin: 1em;
     padding: 3em;
+}
+/* Styling footer */
+footer{
+    background: #333;
+    color: wheat;
+}
+.contact-info{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+.address,.contact-icons{
+    border-bottom: 1px dotted wheat;
+}
+
+.address,.contact-icons,.subscribe{
+    margin: 0 2em;
+    padding-bottom: 1.5em;
+    text-align: center;
+    font-size: 0.8em;
+    line-height: 2em;
+}
+
+.contact-icons a{
+    text-decoration: none;
+    color: wheat;
+    padding-right: 1em;
+}
+
+.subscribe input{
+    margin: 0.5em;
+    padding: 0.5em;
+    border: 1px solid wheat;
+}
+
+.subscribe input[type="submit"]{
+    background: transparent;
+    color: wheat;
+    border: 1px solid wheat;
+    cursor: pointer;
+}
+
+.copyright{
+    background-color: wheat;
+    color: #333;
+    font-size: 12px;
+    text-align: center;
 }
 
 /* Media queries */
@@ -191,10 +241,35 @@ header ul li a:hover{
     .war-item,.science-fiction-item{
         width: 20%;   
     }
+
+    .contact-info{
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+
+    .address,.contact-icons{
+        border-bottom: none;
+        border-right: 1px dotted wheat;
+        text-align: center;
+    }
+
+    .subscribe,.address,.contact-icons{
+        flex-grow: 1;
+        height: 150px;
+        padding: 3em;
+        margin: 2em auto;
+    }
 }
 
 @media (min-width:600px){
     .genre-box{
         flex-flow: row wrap;
+    }
+}
+
+@media (max-width:320px){
+    .war-item{
+        position: relative;
+        right: 2em;
     }
 }
